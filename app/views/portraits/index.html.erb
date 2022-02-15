@@ -1,0 +1,105 @@
+<%= stylesheet_link_tag "portraits", "data-turbo-track": "reload" %>
+<%
+=begin%>
+ <div id="portraits-page" style="opacity: 0;transition: 1s">
+<%
+=end%>
+<div id="portraits-page" >
+  <%= render "content/menu" %>
+
+  <div class="portraits-title">
+    <h1> Portraits </h1>
+  </div>
+  <div class="container" >
+
+    <div class="gallery-container c-4 r-3">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/1.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-2 r-3">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/2.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-2">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/3.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-4">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/5.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-4">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/4.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-2">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/6.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-2">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/8.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-container c-3 r-4">
+      <div class="gallery-item">
+        <div class="image">
+          <%= image_tag 'portraits/7.jpeg', alt: 'nature' %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+
+
+// function myGreeting() {
+//   var page = document.getElementById("portraits-page")
+//   page.style.opacity = "1";
+//   console.log("ENTERED")
+// }
+
+// function myStopFunction() {
+//   clearTimeout(myTimeout);
+// }
+
+// var myTimeout = setTimeout(myGreeting, 100);
+</script>

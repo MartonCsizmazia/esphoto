@@ -1,0 +1,199 @@
+<%= stylesheet_link_tag "content", "data-turbo-track": "reload" %>
+<%
+=begin%>
+ <div class="page-container" id="home" style="opacity: 0;transition: 1s">
+<%
+=end%>
+<div class="page-container" id="home" >
+  <%= render "indexmenu" %>
+
+  <%= image_tag "DSC00961-01.jpeg" %>
+  <div class="canvas">
+    <div class="name-title">
+      <h1 class="artist-name">Stella Novak</h1>
+      <h2 class="artist-job">PHOTOGRAPHER</h2>
+    </div>
+
+    <div class="impressum">
+      @By Cs Marton, 2022
+    </div>
+  </div>
+
+  <a id="portfolio" ></a>
+  <div >
+    <div class="portfolio-title">
+      <h1> Portfolio </h1>
+    </div>
+
+    <div class="card-holder">
+      <div class="grid-item" onclick="location.href='/portraits';">
+        <div class="image">
+          <%= image_tag 'portraits/1.jpeg', alt: 'nature' %>
+        </div>
+        <div class="middle">
+          <div class="text">Portraits</div>
+        </div>
+      </div>
+      <div class="grid-item" onclick="location.href='/weddings';">
+        <div class="image">
+          <%= image_tag 'portraits/2.jpeg', alt: 'nature' %>
+        </div>
+        <div class="middle">
+          <div class="text">Weddings</div>
+        </div>
+      </div>
+      <div class="grid-item" onclick="location.href='/family';">
+        <div class="image">
+          <%= image_tag 'portraits/3.jpeg', alt: 'nature' %>
+        </div>
+        <div class="middle">
+          <div class="text">Family</div>
+        </div>
+      </div>
+      <div class="grid-item" onclick="location.href='/animals';">
+        <div class="image">
+          <%= image_tag 'portraits/4.jpeg', alt: 'nature' %>
+        </div>
+        <div class="middle">
+          <div class="text">Animals</div>
+        </div>
+      </div>
+      <div class="grid-item" onclick="location.href='/landscape';">
+        <div class="image">
+          <%= image_tag 'portraits/5.jpeg', alt: 'nature' %>
+        </div>
+        <div class="middle">
+          <div class="text">Landscape</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <a id="about" ></a>
+  <div class="about-container">
+    <div class="about-text">
+      <h1 class="about-me">
+        About me
+      </h1>
+      <p>
+        <p class="about-line">heeeyooooo</p>
+        <br>
+        <p class="about-line">I have worked as a photographer for almost 6 years, it's my passion as well as my job. I love catching moments and making them last forever in my pictures.</p>
+        <br>
+      </p>
+    </div>
+    <div class="about-picture">
+      <%= image_tag 'about/20210312_151725_582-01-02.webp'%>
+    </div>
+  </div>
+
+  <p id="aknowledgements" >a</p>
+  <div class="aknowledgements-container">
+    <div class="aknowledgements-text">
+      <h1 class="aknowledgements-title">
+        Aknowledgements
+      </h1>
+      <p class="aknowledgements-line">
+        2019 - winner of the Hungarian Photography games in the special ("moments") cathergory
+      </p>
+    </div>
+    <div class="aknowledgements-picture">
+      <%= image_tag 'aknowledgements/8.jpeg' %>
+    </div>
+  </div>
+
+  <div class="aknowledgements-container">
+    <div id="left-picture" class="aknowledgements-picture">
+      <%= image_tag 'aknowledgements/9acb36_6eb66952eacf4a318e62361aef9334c2_mv2.webp'%>
+    </div>
+    <div class="aknowledgements-text">
+      <p class="aknowledgements-line">
+        2021 - "Just married"- picture selected into the official album of Hungary 365 photography contest (the biggest contest in Hungary powered by the government)
+      </p>
+    </div>
+  </div>
+
+
+
+  <a id="contact" ></a>
+  <div class="contact-container">
+    <div class="contact-text">
+      <h1>
+        Contact
+      </h1>
+      <div id="contact-title">
+        <p>
+          Stella Novak
+        </p>
+        <p>
+          Photographer
+        </p>
+        <p>
+          based in Amsterdam
+        </p>
+      </div>
+      <div id="contact-info">
+        <p>
+          Email: info@eszti.com
+        </p>
+        <p>
+          Phone: 123-456-7890
+        </p>
+        <p>
+          Or reach out to me on instagram or facebook
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+<script>
+var menu = document.getElementById("menu-bar");
+menu.style.position="fixed";
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".page-part").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1400, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+
+
+// function myGreeting() {
+//   var page = document.getElementById("home")
+//   page.style.opacity = "1";
+//   console.log("ENTERED")
+// }
+
+// function myStopFunction() {
+//   clearTimeout(myTimeout);
+// }
+
+// var myTimeout = setTimeout(myGreeting, 100);
+
+</script>
