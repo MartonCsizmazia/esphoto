@@ -79,7 +79,6 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
-  padding: 1.5%;
   margin: 0 8%;
 }
 
@@ -176,7 +175,7 @@ h3 {
 }
 
 .about-picture {
-  width: 30rem;
+  max-width: 30rem;
   padding: 3.5% 8% 1.5% 4.5%;
 }
 
@@ -256,4 +255,36 @@ h3 {
 #contact-info p {
   text-align: left;
   margin: -0.8rem 0;
+}
+
+@media screen and (max-width: 900px) {
+  .card-holder {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  .aknowledgements-title {
+    font-size: 7vw;
+  }
+
+  .aknowledgements-line {
+    line-height: 19px;
+    transform: translate(0%, -65%);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card-holder {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .about-container {
+    display: block;
+  }
+  .about-picture {
+    padding: 0;
+    margin: 0 8%;
+    width: auto;
+    max-width: 30rem;
+  }
 }
