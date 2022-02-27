@@ -152,6 +152,9 @@ i {
     cursor: pointer;
     outline: none;
   }
+  .dropdown-span {
+    line-height: 2rem;
+  }
 
   .close-navbar {
     display: block;
@@ -167,5 +170,26 @@ i {
 
   .portraits-title h1 {
     font-size: 4rem;
+  }
+
+  .active {
+    background-color: green;
+    color: white;
+  }
+
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+    height: 15rem;
+    transition: height 1s;
+  }
+
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    padding-top: 0.3rem;
   }
 }
