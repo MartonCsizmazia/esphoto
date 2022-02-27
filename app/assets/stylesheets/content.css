@@ -280,11 +280,35 @@ h3 {
   }
   .about-container {
     display: block;
+    margin-top: 5rem;
   }
   .about-picture {
     padding: 0;
     margin: 0 8%;
     width: auto;
     max-width: 30rem;
+  }
+
+  .name-title {
+    top: 17%;
+  }
+
+  .portfolio-title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .about-me {
+    text-align: center;
+  }
+
+  #aknowledgements {
+    margin-bottom: 3rem;
+  }
+
+  .aknowledgements-title {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 2rem;
   }
 }

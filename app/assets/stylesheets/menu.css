@@ -13,6 +13,28 @@
   right: 0;
 }
 
+.close-navbar {
+  display: none;
+  float: right;
+  margin-right: 1rem;
+  margin-top: -2rem;
+  color: white;
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.close-navbar:hover,
+.close-navbar:focus {
+  color: rgba(68, 68, 68, 0.75);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#menu-button {
+  display: none;
+}
+
 #menu-bar a,
 i {
   cursor: pointer;
@@ -72,8 +94,6 @@ i {
   display: block;
 }
 
-
-
 .dropdown-content a:hover {
   color: rgba(255, 255, 255, 0.541);
 }
@@ -85,4 +105,67 @@ i {
 
 .dropdown:hover .dropbtn {
   border-radius: 5px;
+}
+
+@media screen and (max-width: 750px) {
+  #menu-button {
+    display: block;
+    position: fixed;
+    left: 3rem;
+    top: 2rem;
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  /* Fixed sidenav, full height */
+  #sidenav {
+    display: block;
+    height: 100%;
+    width: 20rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -20rem;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 2.5rem;
+    z-index: 3;
+  }
+
+  /* Style the sidenav links and the dropdown button */
+  #sidenav a,
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .close-navbar {
+    display: block;
+  }
+
+  .portraits-title {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .portraits-title h1 {
+    font-size: 4rem;
+  }
 }

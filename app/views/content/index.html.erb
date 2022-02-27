@@ -1,9 +1,5 @@
 <%= stylesheet_link_tag "content", "data-turbo-track": "reload" %>
-<%
-=begin%>
- <div class="page-container" id="home" style="opacity: 0;transition: 1s">
-<%
-=end%>
+
 <div class="page-container" id="home" >
   <%= render "indexmenu" %>
 
@@ -180,20 +176,5 @@ $(document).ready(function(){
     } // End if
   });
 });
-
-
-
-
-// function myGreeting() {
-//   var page = document.getElementById("home")
-//   page.style.opacity = "1";
-//   console.log("ENTERED")
-// }
-
-// function myStopFunction() {
-//   clearTimeout(myTimeout);
-// }
-
-// var myTimeout = setTimeout(myGreeting, 100);
 
 </script>
