@@ -3,7 +3,7 @@
 <div class="page-container" id="home" >
   <%= render "indexmenu" %>
 
-  <%= image_tag ("DSC00961-01.jpeg") %>
+  <%= image_tag "DSC00961-01.jpeg", alt: "Kids on wedding" %>
   <div class="canvas">
     <div class="name-title">
       <div class="artist-name">Stella Novak</div>
@@ -24,7 +24,7 @@
     <div class="card-holder">
       <div class="grid-item" onclick="location.href='/portraits';">
         <div class="image">
-          <%= image_tag 'portraits/1.jpeg', alt: 'nature' %>
+          <%= image_tag 'portraits/1.jpeg', alt: 'portraits' %>
         </div>
         <div class="middle">
           <div class="text">Portraits</div>
@@ -32,7 +32,7 @@
       </div>
       <div class="grid-item" onclick="location.href='/weddings';">
         <div class="image">
-          <%= image_tag 'portraits/2.jpeg', alt: 'nature' %>
+          <%= image_tag 'portraits/2.jpeg', alt: 'weddings' %>
         </div>
         <div class="middle">
           <div class="text">Weddings</div>
@@ -40,7 +40,7 @@
       </div>
       <div class="grid-item" onclick="location.href='/family';">
         <div class="image">
-          <%= image_tag 'portraits/3.jpeg', alt: 'nature' %>
+          <%= image_tag 'portraits/3.jpeg', alt: 'family' %>
         </div>
         <div class="middle">
           <div class="text">Family</div>
@@ -48,7 +48,7 @@
       </div>
       <div class="grid-item" onclick="location.href='/animals';">
         <div class="image">
-          <%= image_tag 'portraits/4.jpeg', alt: 'nature' %>
+          <%= image_tag 'portraits/4.jpeg', alt: 'animals' %>
         </div>
         <div class="middle">
           <div class="text">Animals</div>
@@ -56,7 +56,7 @@
       </div>
       <div class="grid-item" onclick="location.href='/landscape';">
         <div class="image">
-          <%= image_tag 'portraits/5.jpeg', alt: 'nature' %>
+          <%= image_tag 'portraits/5.jpeg', alt: 'landscape' %>
         </div>
         <div class="middle">
           <div class="text">Landscape</div>
@@ -81,7 +81,7 @@
       </p>
     </div>
     <div class="about-picture">
-      <%= image_tag 'about/20210312_151725_582-01-02.webp'%>
+      <%= image_tag 'about/20210312_151725_582-01-02.webp', alt: 'Sword lady'%>
     </div>
   </div>
 
@@ -96,13 +96,13 @@
       </p>
     </div>
     <div class="aknowledgements-picture">
-      <%= image_tag 'aknowledgements/8.jpeg' %>
+      <%= image_tag 'aknowledgements/8.jpeg', alt: 'hugging a cat'%>
     </div>
   </div>
 
   <div class="aknowledgements-container">
     <div id="left-picture" class="aknowledgements-picture">
-      <%= image_tag 'aknowledgements/9acb36_6eb66952eacf4a318e62361aef9334c2_mv2.webp'%>
+      <%= image_tag 'aknowledgements/9acb36_6eb66952eacf4a318e62361aef9334c2_mv2.webp', alt: 'wedding rock'%>
     </div>
     <div class="aknowledgements-text">
       <p class="aknowledgements-line">
