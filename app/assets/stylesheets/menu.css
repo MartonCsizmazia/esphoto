@@ -108,14 +108,32 @@ i {
 }
 
 @media screen and (max-width: 750px) {
+  .fixed-menu-spacer {
+    width: 100%;
+    background-color: black;
+    height: 3rem;
+  }
+  #menu-button-line {
+    width: 100%;
+    background-color: #111;
+    position: fixed;
+    height: 3rem;
+    z-index: 9;
+  }
+
   #menu-button {
     display: block;
     position: fixed;
-    left: 3rem;
-    top: 2rem;
+    left: 2rem;
     color: white;
     font-size: 2rem;
-    z-index: 2;
+    z-index: 10;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .menu-button-title {
+    cursor: pointer;
   }
 
   #menu-bar {
@@ -128,13 +146,12 @@ i {
     height: 100%;
     width: 20rem;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: -20rem;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 2.5rem;
-    z-index: 3;
+    z-index: 11;
   }
 
   /* Style the sidenav links and the dropdown button */

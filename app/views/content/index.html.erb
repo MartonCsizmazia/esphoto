@@ -1,6 +1,9 @@
 <%= stylesheet_link_tag "content", "data-turbo-track": "reload" %>
 
-<div class="page-container" id="home" >
+<%= render "indexmenumobile" %>
+<div class= "fixed-menu-spacer" id="home">
+</div>
+<div class="page-container">
   <%= render "indexmenu" %>
 
   <%= image_tag "DSC00961-01.jpeg", alt: "Kids on wedding" %>

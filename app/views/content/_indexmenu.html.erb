@@ -1,36 +1,5 @@
 <%= stylesheet_link_tag "menu", "data-turbo-track": "reload" %>
 
-<a class="icon" onclick="openMenuBar()" id="menu-button">
-    <i class="fa fa-bars"></i> <a class="menu-button-title">Menu</a>
-</a>
-<div id="sidenav">
-
-  <span class="close-navbar" onclick="closeMenuBar()">x</span>
-
-  <a href="#home" class="page-part" onclick="closeMenuBar()" >Home</a>
-    <button class="dropdown-btn">
-      <span href="#portfolio" class="dropbtn page-part dropdown-span" >Portfolio</span>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-      <% @portfolio_categories.each do |category|%>
-        <a href="/<%=category %>"> <%=category.capitalize() %> </a>
-      <% end %>
-    </div>
-  <a href="#about" class="page-part" onclick="closeMenuBar()">About</a>
-  <a href="#contact" class="page-part" onclick="closeMenuBar()">Contact</a>
-  <div class="social-media-icons menu-title">
-    <div >
-      <a href="https://www.facebook.com/stellanovakphoto"><i class="fab fa-facebook-f"></i></a>
-    </div>
-    <div >
-      <a href="https://www.instagram.com/nesztiii/"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</div>
-
-
-
 <div id="menu-bar">
 
   <div class="menu-title">
@@ -64,44 +33,4 @@
 </div>
 
 
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
-
-var slideBar = document.getElementById("sidenav");
-var rightSide = document.getElementsByClassName("page-container");
-
-function openMenuBar(){
-  slideBar.style.transition = "1s";
-  slideBar.style.left = "0";
-}
-
-function closeMenuBar(){
-  slideBar.style.transition = "1s";
-  slideBar.style.left = "-20rem";
-}
-
-
-//not working yet
-window.onclick = function(event) {
-  console.log("window onclick")
-  if (event.target == rightSide[0]) {
-    console.log("event target")
-    slideBar.style.transition = "1s";
-    slideBar.style.left = "-20rem";
-  }
-}
-</script>

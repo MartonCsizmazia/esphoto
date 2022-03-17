@@ -1,0 +1,76 @@
+<%= stylesheet_link_tag "menu", "data-turbo-track": "reload" %>
+<div id="menu-button-line">
+  <a class="icon" onclick="openMenuBar()" id="menu-button">
+      <i class="fa fa-bars" id="menu-icon"></i><span class="menu-button-title" id="menu-title-id"> Menu</span>
+  </a>
+</div>
+
+<div id="sidenav">
+
+  <span class="close-navbar" onclick="closeMenuBar()">x</span>
+
+  <a href="#home" class="page-part" onclick="closeMenuBar()" >Home</a>
+  <button class="dropdown-btn" id="portfolio-dropdown">
+    <span class="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <% @portfolio_categories.each do |category|%>
+      <a href="/<%=category %>"> <%=category.capitalize() %> </a>
+    <% end %>
+  </div>
+  <a href="#about" class="page-part" onclick="closeMenuBar()">About</a>
+  <a href="#contact" class="page-part" onclick="closeMenuBar()">Contact</a>
+  <div class="social-media-icons menu-title">
+    <div >
+      <a href="https://www.facebook.com/stellanovakphoto"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <div >
+      <a href="https://www.instagram.com/nesztiii/"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+var portfolioButtonTitle = document.getElementById("portfolio-dropdown-title");
+var portfolioButton = document.getElementById("portfolio-dropdown");
+var menuIcon = document.getElementById("menu-icon");
+var menuButton = document.getElementById("menu-title-id");
+var slideBar = document.getElementById("sidenav");
+var rightSide = document.getElementsByClassName("page-container");
+
+function openMenuBar(){
+  slideBar.style.transition = "1s";
+  slideBar.style.left = "0";
+}
+
+function closeMenuBar(){
+  slideBar.style.transition = "1s";
+  slideBar.style.left = "-20rem";
+}
+
+window.onclick = function(event) {
+  if (event.target != slideBar && event.target != menuButton && event.target != menuIcon && event.target != portfolioButton && event.target != portfolioButtonTitle) {
+    console.log("CONDITION TRIGGERED")
+    closeMenuBar();
+  }
+}
+
+</script>
