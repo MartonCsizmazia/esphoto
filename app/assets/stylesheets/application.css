@@ -16,6 +16,7 @@
 
 html {
   /* scroll-behavior: smooth; IT MAKES AUTO SCROLLING SLOW*/
+  display: block;
 }
 
 #sidenav {

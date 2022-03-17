@@ -20,7 +20,7 @@
   margin-top: -2rem;
   color: white;
   float: right;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -129,7 +129,7 @@ i {
     font-size: 2rem;
     z-index: 10;
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .menu-button-title {
@@ -144,10 +144,10 @@ i {
   #sidenav {
     display: block;
     height: 100%;
-    width: 20rem;
+    width: 17rem;
     position: fixed;
     top: 0;
-    left: -20rem;
+    left: -17rem;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 2.5rem;

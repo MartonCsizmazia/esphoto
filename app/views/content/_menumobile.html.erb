@@ -7,12 +7,12 @@
 
 <div id="sidenav">
 
-  <span class="close-navbar" onclick="closeMenuBar()">x</span>
+  <span class="close-navbar" onclick="closeMenuBar()">×</span>
 
   <a href="/#home" class="page-part" onclick="closeMenuBar()" >Home</a>
   <button class="dropdown-btn" id="portfolio-dropdown">
     <span href="#portfolio" class="dropbtn page-part" id="portfolio-dropdown-title">Portfolio</span>
-    <i class="fa fa-caret-down"></i>
+    <i class="fa fa-caret-down" id="portfolio-dropdown-caret"></i>
   </button>
   <div class="dropdown-container">
     <% @portfolio_categories.each do |category|%>
@@ -49,6 +49,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
+var portfolioCaret = document.getElementById("portfolio-dropdown-caret");
 var portfolioButtonTitle = document.getElementById("portfolio-dropdown-title");
 var portfolioButton = document.getElementById("portfolio-dropdown");
 var menuIcon = document.getElementById("menu-icon");
@@ -63,11 +64,16 @@ function openMenuBar(){
 
 function closeMenuBar(){
   slideBar.style.transition = "1s";
-  slideBar.style.left = "-20rem";
+  slideBar.style.left = "-17rem";
 }
 
 window.onclick = function(event) {
-  if (event.target != slideBar && event.target != menuButton && event.target != menuIcon && event.target != portfolioButton && event.target != portfolioButtonTitle) {
+  if (event.target != slideBar
+    && event.target != menuButton
+    && event.target != menuIcon
+    && event.target != portfolioButton
+    && event.target != portfolioButtonTitle
+    && event.target != portfolioCaret) {
     console.log("CONDITION TRIGGERED")
     closeMenuBar();
   }
