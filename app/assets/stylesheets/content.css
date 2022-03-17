@@ -33,6 +33,10 @@ h3 {
   color: white;
 }
 
+#kids-wedding {
+  width: 100vw;
+}
+
 .artist-name {
   /* font-size: 5rem; */
   font-size: 5vw;
@@ -166,6 +170,10 @@ h3 {
   font-size: 1rem;
 }
 
+#sword-lady {
+  width: 30vw;
+}
+
 .about-me {
   font-size: 4rem;
   margin-right: auto;
@@ -177,7 +185,7 @@ h3 {
 
 .about-picture {
   max-width: 30rem;
-  padding: 3.5% 8% 1.5% 4.5%;
+  padding: 3.5% 12% 1.5% 4.5%;
 }
 
 #aknowledgements {
@@ -194,6 +202,10 @@ h3 {
 .aknowledgements-container {
   display: flex;
   margin-bottom: 3rem;
+}
+
+#hugging-cat {
+  width: 38vw;
 }
 
 .aknowledgements-container p {
@@ -271,7 +283,7 @@ h3 {
   .about-me,
   .aknowledgements-title,
   .contact-header {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 
   .aknowledgements-line {
@@ -291,7 +303,7 @@ h3 {
   }
   .about-picture {
     padding: 0;
-    margin: 0 8%;
+    margin: 0 12%;
     width: auto;
     max-width: 30rem;
   }
@@ -312,5 +324,9 @@ h3 {
     text-align: center;
     padding: 0;
     margin-bottom: 2rem;
+  }
+
+  #sword-lady {
+    width: 80vw;
   }
 }
