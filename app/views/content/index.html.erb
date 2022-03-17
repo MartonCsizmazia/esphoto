@@ -4,20 +4,23 @@
 <div class= "fixed-menu-spacer" id="home">
 </div>
 <div class="page-container">
+  <header>
   <%= render "indexmenu" %>
-
+  </header>
+  <section>
   <%= image_tag "DSC00961-01.jpeg", alt: "Kids on wedding", id:"kids-wedding" %>
   <div class="canvas">
     <div class="name-title">
-      <div class="artist-name">Stella Novak</div>
-      <div class="artist-job">PHOTOGRAPHER</div>
+      <div class="artist-name"><h1 class="artist-name-header">Stella Novak</h1></div>
+      <div class="artist-job"><h2 class="artist-job-header">PHOTOGRAPHER</h2></div>
     </div>
 
     <div class="impressum">
       @By Cs Marton, 2022
     </div>
   </div>
-
+  </section>
+  <section>
   <a id="portfolio" ></a>
   <div >
     <div class="portfolio-title">
@@ -67,27 +70,30 @@
       </div>
     </div>
   </div>
+  </section>
 
-
-
+  <section>
   <a id="about" ></a>
   <div class="about-container">
     <div class="about-text">
       <h1 class="about-me">
         About me
       </h1>
+      <article>
       <p>
         <p class="about-line">heeeyooooo</p>
         <br>
         <p class="about-line">I have worked as a photographer for almost 6 years, it's my passion as well as my job. I love catching moments and making them last forever in my pictures.</p>
         <br>
       </p>
+      </article>
     </div>
     <div class="about-picture">
       <%= image_tag 'about/20210312_151725_582-01-02.webp', alt: 'Sword lady', id:"sword-lady"%>
     </div>
   </div>
-
+  </section>
+  <section>
   <p id="aknowledgements" >a</p>
   <h1 class="aknowledgements-title">
         Aknowledgements
@@ -95,7 +101,9 @@
   <div class="aknowledgements-container">
     <div class="aknowledgements-text">
       <p class="aknowledgements-line">
+      <article>
         2019 - winner of the Hungarian Photography games in the special "moments" cathergory
+      </article>
       </p>
     </div>
     <div class="aknowledgements-picture">
@@ -109,13 +117,15 @@
     </div>
     <div class="aknowledgements-text">
       <p class="aknowledgements-line">
+      <article>
         2021 - "Just married"- picture selected into the official album of Hungary 365 photography contest (the biggest contest in Hungary powered by the government)
+      </article>
       </p>
     </div>
   </div>
+  </section>
 
-
-
+  <section>
   <a id="contact" ></a>
   <div class="contact-container">
     <div class="contact-text">
@@ -146,7 +156,7 @@
       </div>
     </div>
   </div>
-
+  </section>
 
 
 

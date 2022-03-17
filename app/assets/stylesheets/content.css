@@ -37,19 +37,20 @@ h3 {
   width: 100vw;
 }
 
-.artist-name {
-  /* font-size: 5rem; */
-  font-size: 5vw;
-  line-height: 5.2vw;
-  /* margin-bottom: -2.8rem; */
-}
-
 .artist-job {
   margin-left: 0.5rem;
-  /* font-size: 2.2rem; */
+}
+.artist-name-header {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 5vw;
+  line-height: 5.2vw;
+}
+.artist-job-header {
+  margin-block-start: 0;
+  margin-block-end: 0;
   font-size: 2.2vw;
   line-height: 2.3vw;
-  /* letter-spacing: 0.8rem; */
   letter-spacing: 0.8vw;
 }
 
@@ -309,7 +310,7 @@ h3 {
   }
 
   .name-title {
-    top: 17%;
+    top: 24%;
   }
 
   .about-me {
