@@ -12,7 +12,9 @@ gem "sprockets-rails"
 
 
 # Use sqlite3 as the database for Active Record
+# comment next line on production, remove comment for development
 # gem "sqlite3"
+
 gem "pg"
 
 gem "rest-client"
