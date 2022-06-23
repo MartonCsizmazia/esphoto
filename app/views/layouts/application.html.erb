@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hun">
   <head>
     <title>Stella Novak Photography</title>
     <link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/basic-ui-vol-2-32-px/32/ui-photo-picture-camera-512.png">
@@ -21,6 +21,24 @@
 
   <body >
     <%= yield %>
+
+    <script>
+      if (localStorage.getItem("language") == null){
+        localStorage.setItem("language", "hungarian");
+      }
+
+      var elems = document.querySelectorAll('[language]');
+
+      elems.forEach(setLanguage);
+      function setLanguage(value) {
+        if (value.getAttribute('language') != localStorage.getItem("language")){
+          console.log(value)
+          value.style.display = "none";
+        }
+      }
+
+      console.log(localStorage.getItem("language"))
+    </script>
   </body>
 
 </html>

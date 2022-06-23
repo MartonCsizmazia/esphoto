@@ -21,6 +21,10 @@
   </div>
   <a href="/#about" class="page-part" onclick="closeMenuBar()">About me</a>
   <a href="/#contact" class="page-part" onclick="closeMenuBar()">Contact</a>
+  <div class= "mobile-flag" onclick="setTimeout(changeLanguage, 1000);">
+      <%= image_tag 'flags/flag-400.png', language: "english", alt: 'Magyar nyelvű oldal', id: 'flag-picture', style: "width: 15%; cursor: pointer"%>
+      <%= image_tag 'flags/illustration-uk-flag_53876-18166.webp', language: "hungarian", alt: 'Change to english', id: 'flag-picture', style: "width: 15%; cursor: pointer"%>
+  </div>
   <div class="social-media-icons menu-title">
     <div >
       <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -65,6 +69,15 @@ function openMenuBar(){
 function closeMenuBar(){
   slideBar.style.transition = "1s";
   slideBar.style.left = "-17rem";
+}
+
+function changeLanguage(){
+  if (localStorage.getItem("language") == "hungarian"){
+        localStorage.setItem("language", "english");
+  } else {
+        localStorage.setItem("language", "hungarian");
+  }
+  location.reload();
 }
 
 window.onclick = function(event) {

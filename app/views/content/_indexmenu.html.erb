@@ -3,10 +3,12 @@
 <div id="menu-bar">
 
   <div class="menu-title">
-    <a href="#home" class="page-part"  >Home</a>
+    <a language="english" href="#home" class="page-part"  >Home</a>
+    <a language="hungarian" href="#home" class="page-part"  >Főoldal</a>
   </div>
   <div class="menu-title dropdown">
-    <a href="#portfolio" class="dropbtn page-part" >Portfolio</a>
+    <a language="english" href="#portfolio" class="dropbtn page-part" >Portfolio</a>
+    <a language="hungarian" href="#portfolio" class="dropbtn page-part" >Galéria</a>
     <div class="dropdown-content">
       <% @portfolio_categories.each do |category|%>
         <a href="/<%=category %>"> <%=category.capitalize() %> </a>
@@ -14,13 +16,22 @@
     </div>
   </div>
   <div class="menu-title dropdown">
-    <a href="#about" class="page-part" >About me</a>
+    <a language="english" href="#about" class="page-part" >About me</a>
+    <a language="hungarian" href="#about" class="page-part" >Rólam</a>
     <div class="dropdown-content" >
-      <a href="#aknowledgements" class="page-part">Aknowledgements</a>
+      <a language="english" href="#aknowledgements" class="page-part">Aknowledgements</a>
+      <a language="hungarian" href="#aknowledgements" class="page-part">Elismerések</a>
     </div>
   </div>
   <div class="menu-title">
-    <a href="#contact" class="page-part" >Contact</a>
+    <a language="english" href="#contact" class="page-part" >Contact</a>
+    <a language="hungarian" href="#contact" class="page-part" >Kapcsolat</a>
+  </div>
+  <div class="menu-title" id = "flag">
+    <div onclick="changeLanguage()">
+      <%= image_tag 'flags/flag-400.png', language: "english", alt: 'Magyar nyelvű oldal', id: 'flag-picture', style: "width: 20%; cursor: pointer"%>
+      <%= image_tag 'flags/illustration-uk-flag_53876-18166.webp', language: "hungarian", alt: 'Change to english', id: 'flag-picture', style: "width: 20%; cursor: pointer"%>
+    </div>
   </div>
   <div class="social-media-icons menu-title">
     <div >
@@ -31,3 +42,16 @@
     </div>
   </div>
 </div>
+
+<script>
+
+function changeLanguage(){
+  if (localStorage.getItem("language") == "hungarian"){
+        localStorage.setItem("language", "english");
+  } else {
+        localStorage.setItem("language", "hungarian");
+  }
+  location.reload();
+}
+
+</script>

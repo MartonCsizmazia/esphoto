@@ -50,7 +50,6 @@ i {
 }
 
 .menu-title {
-  /* margin: 0 3rem; */
   width: 12vw;
 }
 
@@ -138,6 +137,15 @@ i {
 
   #menu-bar {
     display: none;
+  }
+
+  #flag{
+    width: 5rem;
+  }
+
+  #flag-picture {
+    width: 20%;
+    cursor: pointer;
   }
 
   /* Fixed sidenav, full height */
